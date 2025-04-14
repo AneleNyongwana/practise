@@ -1,7 +1,6 @@
 import React from 'react'
 import lady from '../assets/images/lady.jpg'
 
-
 const AboutUs = () => {
   return (
     <div>
@@ -10,7 +9,7 @@ const AboutUs = () => {
                 <div className="experience_content">
                     <div className="info box">
                          <div className="title">
-                            <h1>About</h1>
+                            <h1>About Us</h1>
                         </div>
                         <p>
                             We specialise exclusively in recruitment for the Stockbroking, Asset<br />
