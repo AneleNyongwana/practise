@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  line-height: 1;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: blue;
+  --secondary-color: #fff;
+  --text-font-size: 16px;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --transition: all 300ms ease;
+}
+
+.section {
+  padding: 100px 20px;
+}
+
+.menu {
+  height: 2.5rem;
+  width: 2.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.logo {
+  width: 280px;
+  height: 100px;
+  overflow: hidden;
+}
+.logo .logo_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: var(--transition);
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  z-index: 100;
+}
+.header .navbar {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header .navbar ul li a {
+  font-size: var(--text-font-size);
+  font-weight: 700;
+  color: black;
+}
+.header .navbar ul li a:hover {
+  color: var(--primary-color);
+}
+
+p {
+  line-height: 1.5;
+}
+
+.btn {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: var(--text-font-size);
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: rgb(20, 173, 219);
+}
+
+.home .home_slide {
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  height: 100vh;
+  position: relative;
+}
+.home .home_slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .home_slide .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home .home_slide .container p {
+  color: #fff;
+}
+.home .home_slide .container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.home .home_slide .container .btn {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.experience .container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.experience .container .experience_content {
+  display: flex;
+  justify-items: center;
+  gap: 1rem;
+}
+.experience .container .experience_content .box {
+  flex: 1 1 45rem;
+  align-self: normal;
+}
+.experience .container .experience_content .box .title {
+  margin-bottom: 2rem;
+}
+.experience .container .experience_content .box .buttons {
+  margin-top: 2rem;
+}
+.experience .container .experience_content .box .image {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.experience .container .experience_content .box .image .ladyImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mission {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/images/team.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+.mission .container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #fff;
+}
+.mission .container .title h2 {
+  margin-bottom: 2rem;
+}
+
+.recruit_content {
+  background: #eeeded;
+}
+.recruit_content .content {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.recruit_content .content h2 {
+  padding-top: 50px;
+}
+.recruit_content .content h4 {
+  font-size: 20px;
+}
+
+.jobs {
+  padding-bottom: 160px;
+}
+.jobs .content {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.jobs .content .container-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.jobs .content .container-box .box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+.jobs .content .container-box .box:nth-child(2) .department {
+  background-color: green;
+}
+.jobs .content .container-box .box .department {
+  position: absolute;
+  top: -1rem;
+  right: -0.3rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 6px;
+}
+.jobs .content .container-box .box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.jobs .content .container-box .box .title {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 6px;
+}
+.jobs .content .container-box .box .info {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.jobs .content .container-box .box .more {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: solid 1px #ccc;
+  background: #f8f9fa;
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/images/meeting.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+.banner .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  color: #fff;
+}
+.banner .content h1 {
+  font-size: 4rem;
+}
+
+.getInTouch {
+  background: #eeeded;
+}
+.getInTouch .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.getInTouch .container .title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.getInTouch .container .title h3 {
+  font-size: 2rem;
+}
+.getInTouch .container .info {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.getInTouch .container .info .box {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.getInTouch .container .info .box img {
+  width: 40px;
+  height: 40px;
+}
+.getInTouch .container .info .box .text h3 {
+  margin-bottom: 1rem;
+}
+
+.parallex {
+  height: 50vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/images/office.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contactForm .container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.contactForm .container .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.contactForm .container .contentBox .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.contactForm .container .contentBox .form .inputBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.contactForm .container .contentBox .form label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.contactForm .container .contentBox .form label .textInput {
+  resize: none;
+  width: 100%;
+  padding: 0.6rem;
+  outline: none;
+  border: 2px solid #ccc;
+}
+.contactForm .container .contentBox .form label .textInput:focus, .contactForm .container .contentBox .form label .textInput:hover {
+  border-color: var(--primary-color);
+}
+
+.footer {
+  background: #2A4976;
+  padding-bottom: 40px;
+}
+.footer .top .content {
+  background: white;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: -180px;
+}
+.footer .bottom {
+  margin-top: 3rem;
+}
+.footer .bottom .content {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.footer .bottom .content .box {
+  flex: 1 1 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .bottom .content .box p {
+  color: #fff;
+  width: 300px;
+}
+.footer .bottom .content .box h3 {
+  color: #fff;
+}
+.footer .bottom .content .box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .bottom .content .box ul li {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.footer .bottom .content .box ul li a {
+  color: white;
+  transition: var(--transition);
+}
+.footer .bottom .content .box ul li a:hover {
+  padding-left: 10px;
+  color: var(--primary-color);
+}
+.footer .copyright {
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 1px solid gray;
+  padding-top: 2rem;
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .menu {
+    display: flex;
+  }
+  .header .navbar {
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    transition: var(--transition);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .header .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .header .navbar ul li {
+    width: 100%;
+  }
+  .header .navbar .btn {
+    width: 100%;
+  }
+  .header .logo {
+    width: 130px;
+    height: 40px;
+  }
+  .section {
+    padding: 50px 20px;
+  }
+  .home .home_slide .container h1 {
+    font-size: 2.5rem;
+  }
+  .jobs .content .container-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .footer .top .content {
+    margin-top: -100px;
+  }
+  .jobs {
+    padding-bottom: 130px;
+  }
+  .footer .bottom .content {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .footer .bottom .content .box p {
+    color: #fff;
+    width: 100%;
+  }
+  .home .home_slide .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home .home_slide .container h1 {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
