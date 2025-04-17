@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="footer section">
         <div className="top">
           <div className="content">
-            <h2>Looking for a career change? Browse our job listings now!</h2>
+            <h2>Looking for a career change? Browse our job listings now</h2>
             <button className="btn">APPLY NOW</button>
           </div>
         </div>
